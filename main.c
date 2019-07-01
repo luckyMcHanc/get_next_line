@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmhlanga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/09 11:40:04 by lmhlanga          #+#    #+#             */
-/*   Updated: 2019/07/01 13:06:42 by lmhlanga         ###   ########.fr       */
+/*   Created: 2019/07/01 12:30:20 by lmhlanga          #+#    #+#             */
+/*   Updated: 2019/07/01 12:54:29 by lmhlanga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include "libft/libft.h"
-# include <fcntl.h> 
-# include <stdlib.h>
+#include "get_next_line.h"
+#include <fcntl.h>
 
-# define BUFF_SIZE 42
+int		main(int argc, char **argv)
+{
+	int		fd;
+	char	*line = NULL;
 
-# define MALLCHECK(x) if (!x) return (-1);
-
-int		get_next_line(const int fd, char **line);
-#endif
+	if (argc == 1)
+		fd = 0;
+	else if (argc == 2)
+		fd = open(argv[1], O_RDONLY);
+	else
+		return (2);
+	while (get_next_line(fd, &line) == 1)
+	{
+		ft_putendl(line);
+		free(line);
+	}
+	if (argc == 2)
+		close(fd);
+}
