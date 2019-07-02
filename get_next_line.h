@@ -6,14 +6,13 @@
 /*   By: lmhlanga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 11:40:04 by lmhlanga          #+#    #+#             */
-/*   Updated: 2019/07/01 13:06:42 by lmhlanga         ###   ########.fr       */
+/*   Updated: 2019/07/02 14:41:46 by lmhlanga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 # include "libft/libft.h"
-# include <fcntl.h> 
 # include <stdlib.h>
 
 # define BUFF_SIZE 42
