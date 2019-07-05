@@ -6,7 +6,7 @@
 /*   By: lmhlanga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/09 11:40:04 by lmhlanga          #+#    #+#             */
-/*   Updated: 2019/07/02 14:41:46 by lmhlanga         ###   ########.fr       */
+/*   Updated: 2019/07/05 13:09:30 by lmhlanga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include "libft/libft.h"
 # include <stdlib.h>
 
-# define BUFF_SIZE 42
+# define BUFF_SIZE 8
 
 # define MALLCHECK(x) if (!x) return (-1);
 
